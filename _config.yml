@@ -1,0 +1,43 @@
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Myvar's Blog
+email: Myvarhd@gmail.com
+description: >
+  The myvaria blog
+
+baseurl: "" 
+
+url: "myvar.github.io" 
+paginate: 5
+
+twitter_username: myvar
+github_username:  myvar
+
+# Assets
+sass:
+  sass_dir: _sass
+  style:  :compressed
+
+# About
+author:
+  name: Emile Badenhorst
+  url:  http://myvar.cloud
+  email:  admin@myvar.global
+
+# Custom vars
+version:  3.4.1
+github:
+  repo:  "https://github.com/Myvar/myvar.github.io"
+
+# Build settings
+markdown: kramdown
+#theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
