@@ -2,20 +2,20 @@
 layout: post
 ---
 
-( *Note* this is just a silly idea) 
+( *Note* this is just an idea) 
 
 # The Byte only idea
-So a few days ago i was thinking, about programing languages that handle everything as if it was a object like ruby does, now i have no idea how to even do that, my logic being how can a string or int be an object because at some level there must be raw memory accessing to store, the raw byte's representing the string or int, this got me thinking how would a programming language look that can only declare variables that is an byte or byte arrays, an no other data types. (side note i still don't know how ruby actually goes about doing this xD)
+So a few days ago i was thinking about programing languages that handles everything as if it was a object, like ruby does. I have no idea how to even do that. How can a string or int be an object because at some level there must be raw memory accessing to store the raw byte's representing the string or int. This got me thinking how would a programming language look that could only declare variables as a byte or byte array, and no other data types. (side note i still don't know how ruby actually goes about doing this xD)
 
 # Other Data types
-At this point your probably wondering, "only bytes, uh gross", well have no fear OOP is here, consider this:
+At this point you're probably wondering, "only bytes, uh gross", well have no fear OOP is here. Consider this:
 {% highlight csharp linenos %}
 var strA = "Hello world";
 var intA = 20;
 {% endhighlight %}
 looking at the code sample we can say that ```strA``` is an string, and that ```intA``` is int type,
-this is very convenient, for the developer, now comes the question how do we make this happen in byte only.
-well, the sultion is quit simple, something like this:
+this is very convenient for the developer. Now comes the question of how do we make this happen in byte only.
+The sultion is quit simple it looks something like this:
 {% highlight csharp linenos %}
 //we create a wrapper class for our new data type
 public class string
@@ -86,13 +86,13 @@ var foo = "Hello " + "world";
 //to
 var foo = "Hello ".add("world");
 {% endhighlight %}
-now you will notice i did not name the int class intiger but intsted i named it number, the idea being, why have a int8 or 16 or 32 or 64 or float, why not have one generic class called number that incompises all the complexitys that is a number, the ```_buffer``` array can expand as the bit size of the number changes, allowing the number to be as big or acuret as you need it to be, as for operators same story as the string
+Now you will notice i did not name the int class integer but intsted I named it number, the idea being, why have a int8, 16, 32 , 64 or float. Why not have one generic class called number that incompises all the complexities that is a number. The ```_buffer``` array can expand as the bit size of the number changes, allowing the number to be as big or accurate as you need it to be, as for operators same story as the string
 
-that is the basic idea, now two qeuestions remain, how fast will it be and why?
+That is the basic idea and two questions remain, how fast will it be and why?
 
 How fast will it be?
-it will be considribly slower than using the cpu's building data types native instructions to do minipulations,
-so i can only see the being a practical aprotch in a interpited invirment, maby in a jit situation.
+it will be considerably slower than using the cpu's building data types native instructions to do manipulations
+therefor i can see it being a practical aproch in a interpited enviroment, maybe in a jit situation.
 
 Why?
 i dont know, seems a little pointless.
